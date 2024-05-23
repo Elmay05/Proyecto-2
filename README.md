@@ -15,7 +15,7 @@ Este proyecto está pensado para crear una pagina de streaming llamada " MIAvie 
 ## Problema 
 Para este proyecto tenemos una problematica en la que ocupamos crear una pagina de streaming, en esta se debe poder agregar peliculas y series, tanto las series y peliculas deben tener registrado su nombre, una sinopsis, clasificacion, y la categoria (romance, accion, terror,etc). Para las peliculas a demas de lo anterior, se le debe agregar una duracion y para las series se les debe dar temporadas, estas temporadas tendrán el nombre de la temporada y el numero de episodios que tiene
 ## Funcionamiento
-Para realizarlo ocupamos hacer: 
+Para realizarlo ocupamos hacer:
 
 * Clase MIAvie_Plus en la que se tendrán 2 listas, una de series en las que se agregarán objetos de clase series y otra de peliculas en las que se agregarán objetos de clase peliculas.
 
