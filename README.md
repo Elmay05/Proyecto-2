@@ -24,4 +24,8 @@ Cosas en comun entre las Peliculas y Series, entonces ocupamos:
 * Clase Pelicula hay que agregarle una duración 
 * Clase Serie hay que ponerle una lista para las temporadas y una lista para los episodios.
 #### Nota: En la clase MIAvie_Plus hay que implementar una funcion para mostrar series y peliculas y una funcion para consultar los datos de alguna serie o alguna pelicula 
+## Consideraciones
+* El promgrama no funcionará si se quieren consultar los datos de una serie o pelicula que no han sido agregados
+* El programa no funcionará si se quiere el nombre de cada capitulo de temporada ya que este solo guarda el numero de capitulos que tiene
+* Si 
 
