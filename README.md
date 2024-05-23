@@ -17,7 +17,8 @@ Para este proyecto tenemos una problematica en la que ocupamos crear una pagina 
 ## Funcionamiento
 Para realizarlo ocupamos hacer: 
 
-* Clase MIAvie_Plus en la que se tendrán 2 listas, una de series en las que se agregarán objetos de clase series y otra de peliculas en las que se agregarán objetos de clase peliculas. 
+* Clase MIAvie_Plus en la que se tendrán 2 listas, una de series en las que se agregarán objetos de clase series y otra de peliculas en las que se agregarán objetos de clase peliculas.
+
 Cosas en comun entre las Peliculas y Series, entonces ocupamos: 
 * Clase Madre para estas 2 llamada Contenido en la que guardemos el nombre, sinopsis, clasificacion, categoria 
 * Clase Pelicula hay que agregarle una duración 
