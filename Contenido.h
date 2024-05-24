@@ -23,7 +23,6 @@ class Contenido{
         void set_nombre(std::string);
         void set_sinopsis(std::string);
         void set_clasificacion(std::string);
-
         void agregar_categoria(std::string);
         void resumen();
 };
