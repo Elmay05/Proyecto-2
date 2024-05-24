@@ -28,4 +28,5 @@ Cosas en comun entre las Peliculas y Series, entonces ocupamos:
 * El promgrama no funcionará si se quieren consultar los datos de una serie o pelicula que no han sido agregados
 * El programa no funcionará si se quiere el nombre de cada capitulo de temporada ya que este solo guarda el numero de capitulos que tiene
 * Si en las opciones se selecciona una letra, el programa fallará
+* No se deben utilizar numeros negativos 
 
