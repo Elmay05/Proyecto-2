@@ -100,20 +100,21 @@ void Serie::agrega_episodios(int tem, int ep){
         std::cout<<"Primero tienes que agregar una temporada"<<std::endl;
     }
     else{
-        episodios[tem-1]=ep;
+        episodios[tem]=ep;
     }
 
 };
 void Serie::resumen(){
     std::cout<<"Nombre: "<<nombre<<std::endl<<"Sinopsis: "<<sinopsis<<std::endl<<"Clasificacion: "<<clasificacion<<std::endl<<"Categorias: "<<std::endl;
+    for(int i=0; i<categoria; i++){
+        std::cout<<i+1<<".- "<<categorias[i]<<std::endl;
+    }
+    std::cout<<std::endl;
     for(int i=0;i<temporada;i++){
-        std::cout<<"Temporada"<<i+1<<": "<<temporadas[i]<<std::endl;
+        std::cout<<"Temporada "<<i+1<<": "<<temporadas[i]<<std::endl;
         std::cout<<"Episodios: "<<episodios[i]<<std::endl;
     }
-
-    for(int i=0; i<categoria; i++){
-        std::cout<<i+1<<".- "<<categorias[i]<<std::endl<<std::endl;;
-    }
+    std::cout<<std::endl;
 
 
 };
@@ -207,9 +208,9 @@ void MIAvie::agrega_temporada(int ser,std::string tem){
 };
 
 void MIAvie::agrega_episodio(int ser, int tem, int ep){
-    if(ser-1<serie){
-        if(tem-1<series[ser-1]->get_temporada()){
-            series[ser-1]->agrega_episodios(tem-1,ep);
+    if(ser<serie){
+        if(tem<series[ser]->get_temporada()){
+            series[ser]->agrega_episodios(tem,ep);
         }else{
             std::cout<<"No existe temporada"<<std::endl;
         }
