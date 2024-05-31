@@ -2,6 +2,8 @@
 #define CONTENIDO_H_INCLUDED
 #include <iostream>
 #include <string>
+#include <sstream>
+
 // Declaracion de clase Madre
 class Contenido{
     protected:
@@ -24,7 +26,7 @@ class Contenido{
         void set_sinopsis(std::string);
         void set_clasificacion(std::string);
         void agregar_categoria(std::string);
-        void resumen();
+        virtual std::string resumen();
 };
 void Contenido::set_nombre(std::string nom){
     nombre=nom;
@@ -45,11 +47,14 @@ void Contenido::muestra_categoria(){
         std::cout<<i+1<<".- "<<categorias[i]<<std::endl;
     }
 }
-void Contenido::resumen(){
-    std::cout<<"Nombre: "<<nombre<<std::endl<<"Sinopsis: "<<sinopsis<<std::endl<<"Clasificacion: "<<clasificacion<<std::endl<<"Categorias: "<<std::endl;
+std::string Contenido::resumen(){
+    std::stringstream aux;
+
+    aux<<"Nombre: "<<nombre<<std::endl<<"Sinopsis: "<<sinopsis<<std::endl<<"Clasificacion: "<<clasificacion<<std::endl<<"Categorias: "<<std::endl;
     for(int i=0; i<categoria; i++){
-        std::cout<<i+1<<".- "<<categorias[i]<<std::endl;
+        aux<<i+1<<".- "<<categorias[i]<<std::endl;
     }
+    return aux.str();
 };
 
 class Pelicula:public Contenido{
@@ -60,7 +65,7 @@ class Pelicula:public Contenido{
         Pelicula(std::string nom,std::string sino,std::string cla,std::string dur):Contenido(nom,sino,cla),duracion(dur){};
         std::string get_duracion();
         void set_duracion(std::string);
-        void resumen();
+        std::string resumen();
 };
 std::string Pelicula::get_duracion(){
     return duracion;
@@ -68,12 +73,14 @@ std::string Pelicula::get_duracion(){
 void Pelicula::set_duracion(std::string dur){
     duracion=dur;
 };
-void Pelicula::resumen(){
-    std::cout<<"Nombre: "<<nombre<<std::endl<<"Sinopsis: "<<sinopsis<<std::endl<<"Clasificacion: "<<clasificacion<<std::endl<<"Categorias: "<<std::endl;
+std::string Pelicula::resumen(){
+    std::stringstream aux;
+    aux<<"Nombre: "<<nombre<<std::endl<<"Sinopsis: "<<sinopsis<<std::endl<<"Clasificacion: "<<clasificacion<<std::endl<<"Categorias: "<<std::endl;
     for(int i=0; i<categoria; i++){
-        std::cout<<i+1<<".- "<<categorias[i]<<std::endl;
+        aux<<i+1<<".- "<<categorias[i]<<std::endl;
     }
-    std::cout<<"Duracion: "<<duracion<<std::endl<<std::endl;
+    aux<<"Duracion: "<<duracion<<std::endl<<std::endl;
+    return aux.str();
 };
 class Serie:public Contenido{
     private:
@@ -87,7 +94,7 @@ class Serie:public Contenido{
         int get_temporada(){return temporada;}
         void agrega_temporada(std::string);
         void agrega_episodios(int, int);
-        void resumen();
+        std::string resumen();
 
 
 };
@@ -104,19 +111,19 @@ void Serie::agrega_episodios(int tem, int ep){
     }
 
 };
-void Serie::resumen(){
-    std::cout<<"Nombre: "<<nombre<<std::endl<<"Sinopsis: "<<sinopsis<<std::endl<<"Clasificacion: "<<clasificacion<<std::endl<<"Categorias: "<<std::endl;
+std::string Serie::resumen(){
+    std::stringstream aux;
+    aux<<"Nombre: "<<nombre<<std::endl<<"Sinopsis: "<<sinopsis<<std::endl<<"Clasificacion: "<<clasificacion<<std::endl<<"Categorias: "<<std::endl;
     for(int i=0; i<categoria; i++){
-        std::cout<<i+1<<".- "<<categorias[i]<<std::endl;
+        aux<<i+1<<".- "<<categorias[i]<<std::endl;
     }
-    std::cout<<std::endl;
+    aux<<std::endl;
     for(int i=0;i<temporada;i++){
-        std::cout<<"Temporada "<<i+1<<": "<<temporadas[i]<<std::endl;
-        std::cout<<"Episodios: "<<episodios[i]<<std::endl;
+        aux<<"Temporada "<<i+1<<": "<<temporadas[i]<<std::endl;
+        aux<<"Episodios: "<<episodios[i]<<std::endl;
     }
-    std::cout<<std::endl;
-
-
+    aux<<std::endl;
+    return aux.str();
 };
 
 class MIAvie{
@@ -166,7 +173,7 @@ void MIAvie::mostrar_peliculas(){
 
 void MIAvie::consulta_serie(int ser){
     if(ser<serie){
-        series[ser]->resumen();
+        std::cout<<series[ser]->resumen();
     }
     else{
         std::cout<<"Numero invalido o no existe la serie"<<std::endl;
@@ -174,7 +181,7 @@ void MIAvie::consulta_serie(int ser){
 };
 void MIAvie::consulta_pelicula(int pel){
     if(pel<pelicula){
-        peliculas[pel]->resumen();
+        std::cout<<peliculas[pel]->resumen();
     }
     else{
         std::cout<<"Numero invalido o no existe la pelicula"<<std::endl;
