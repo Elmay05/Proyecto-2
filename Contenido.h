@@ -45,7 +45,7 @@ class Contenido{
         void agregar_categoria(std::string);
         void set_tipo(std::string);
         // Metodos abstractos que serán sobreescritos
-        virtual std::string resumen();
+        virtual std::string resumen()=0;
         virtual void agrega_temporada(std::string){}
         virtual void agrega_episodios(int, int){}
         virtual int get_temporada(){return 0;}
