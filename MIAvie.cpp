@@ -74,7 +74,7 @@ int main(){
     miavieplus.agrega_episodio(1,1,7);
     miavieplus.agrega_episodio(1,2,11);
     miavieplus.agrega_episodio(1,3,11);
-    miavieplus.agrega_episodio(1,4,4);
+    miavieplus.agrega_episodio(1,4,5);
 
 
     miavieplus.agrega_serie("La casa de papel","Ocho ladrones toman rehenes en la Fábrica "
