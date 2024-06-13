@@ -92,7 +92,7 @@ void Serie::agrega_episodios(int tem, int ep){
         std::cout<<"Primero tienes que agregar una temporada"<<std::endl;
     }
     else{
-        episodios[tem]=ep;
+        episodios[tem]=episodios[tem]+ep;
     }
 
 };
