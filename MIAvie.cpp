@@ -60,8 +60,8 @@ int main(){
   //---------------------- agregando algunas series -----------------------------
     // Series
     miavieplus.agrega_serie("Demon slayer","Tanjirou Kamado es un chico "
-                            "inteligente y de buen corazón que vive con "
-                            "su familia y gana dinero vendiendo carbón. "
+                            "inteligente y de buen corazon que vive con "
+                            "su familia y gana dinero vendiendo carbon. "
                             "Todo cambia cuando su familia es atacada y "
                             "asesinada por un demonio (oni).","B");
     miavieplus.agrega_categoria_serie(1,"Accion");
@@ -81,13 +81,13 @@ int main(){
 
 
     miavieplus.agrega_serie("La casa de papel","Ocho ladrones toman rehenes"
-                            " en la Fábrica Nacional de Moneda y Timbre de "
-                            "España, mientras el líder de la banda manipula"
-                            " a la policía para cumplir con su plan.","TV-MA");
+                            " en la Fabrica Nacional de Moneda y Timbre de "
+                            "España, mientras el lider de la banda manipula"
+                            " a la policia para cumplir con su plan.","TV-MA");
     miavieplus.agrega_categoria_serie(2,"Crimen");
     miavieplus.agrega_categoria_serie(2,"Drama");
     miavieplus.agrega_categoria_serie(2,"Suspenso");
-    miavieplus.agrega_categoria_serie(2,"Acción");
+    miavieplus.agrega_categoria_serie(2,"Accion");
     miavieplus.agrega_temporada(2,"Parte 1");
     miavieplus.agrega_temporada(2,"Parte 2");
     miavieplus.agrega_temporada(2,"Parte 3");
@@ -101,13 +101,13 @@ int main(){
 
 
     miavieplus.agrega_serie("BRIDGERTON","Mientras las debutantes anhelan ser"
-                            " los diamantes más relucientes del baile, una"
+                            " los diamantes mas relucientes del baile, una"
                             " discreta gema con una doble vida "
                             "descubre su propio brillo entre secretos y"
                             " sorpresas.","TV-MA");
-    miavieplus.agrega_categoria_serie(3,"Drama romántico");
-    miavieplus.agrega_categoria_serie(3,"Romance histórico");
-    miavieplus.agrega_categoria_serie(3,"Comedia dramática");
+    miavieplus.agrega_categoria_serie(3,"Drama romantico");
+    miavieplus.agrega_categoria_serie(3,"Romance historico");
+    miavieplus.agrega_categoria_serie(3,"Comedia dramatica");
     miavieplus.agrega_categoria_serie(3,"Drama familiar");
     miavieplus.agrega_temporada(3,"T 1");
     miavieplus.agrega_temporada(3,"T 2");
@@ -117,12 +117,12 @@ int main(){
     miavieplus.agrega_episodio(3,2,4);
 
 
-    miavieplus.agrega_serie("SPY x FAMILY","Loid y Yor son un par de espías"
+    miavieplus.agrega_serie("SPY x FAMILY","Loid y Yor son un par de espias"
                             " con una doble vida, manteniendo sus identidades"
                             " ocultas incluso entre ellos mismos mientras "
                             "simulan ser la familia ideal. Sin embargo, su "
                             "hija adoptiva Anya, dotada de habilidades "
-                            "telepáticas, conoce sus secretos más profundos "
+                            "telepaticas, conoce sus secretos mas profundos "
                             "sin que ellos lo sepan.","TV-14");
     miavieplus.agrega_categoria_serie(4,"Accion");
     miavieplus.agrega_categoria_serie(4,"Comedia");
